@@ -1,0 +1,68 @@
+html{
+  position: relative;
+  min-height: 100%;
+}
+body{  
+  background-color: #59698d;
+  margin: 0 0 90px;
+  
+}
+main{
+  margin: 0 auto;
+  
+}
+
+
+.card{
+  padding: 2%;
+  text-align: justify;
+  font-family: arial;
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  -webkit-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21); 
+}
+
+.conteudop{
+  font-family: 'Libre Baskerville', serif;
+}
+
+.h1index{
+  text-align: center;
+  font-family: 'Bangers', cursive;
+}
+
+/*JOGOS*/
+
+.jogoh1{
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Bangers', cursive;
+
+}
+.h4jogos{
+  text-align: center;
+  font-family: 'Monda', sans-serif;
+}
+
+
+
+
+
+
+footer{
+  background-color:#333333;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  color: #fff;
+  font-size: 17px;
+  text-align: center;
+
+}
+
+
+

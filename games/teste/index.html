@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Testando login</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h2 id="errolog"></h2>
+        <form id="formlogin">
+            <input type="email" id="email" placeholder="Digite seu e-mail" required />
+            <input type="password" id="senha" placeholder="Senha" required />
+        </form>
+        <button id="btn-entrar">Entrar</button>
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $("#btn-entrar").click(function () {
+                    var login = $('#email').val();	//Pega valor do campo email
+                    var senha = $('#senha').val();	//Pega valor do campo senha
+                    $.ajax({//Função AJAX
+                        url: "login.php", //Arquivo php
+                        type: "post", //Método de envio
+                        dataType: 'html',
+                        data: {email: login, senha: senha}, //Dados
+                        beforeSend: function () {
+                            alert("Logando...");
+                        },
+                        success: function (result) {
+                           //alert(result);//Sucesso no AJAX
+                            if (result == 1) {
+                                location.href = 'restrito.php'	//Redireciona
+                            } else {
+                                $('#errolog').html("<h1>Usuário ou senha inválidos.</h1>");		//Informa o erro
+                            }
+                        },
+                        error: function () {
+                            alert("Algo deu errado.");
+                        }
+                    });
+                });
+
+                //$('#errolog').hide(); //Esconde o elemento com id errolog
+
+
+            });
+        </script>
+
+
+
+
+
+
+
+
+    </body>
+</html>
